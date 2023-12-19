@@ -1,0 +1,23 @@
+<div th:insert="header :: topo"></div>
+<div class="mx-auto" style="width: 90%">
+
+
+
+<form action="#" th:action="@{/paciente/salvar}" th:object="${paciente}" method="post">
+
+
+<div class="form-group">
+    <label for="formGroupExampleInput">Nome</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" th:field="*{nome}" placeholder="Seu nome">
+  </div>
+<div class="form-group">
+<label for="formGroupExampleInput">CPF</label>
+<input type="text" th:field="*{cpf}" class="form-control" id="formGroupExampleInput"  placeholder="Seu CPF">
+</div>
+
+<button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+
+
+</div>
+<div th:insert="footer :: rodape"></div>

@@ -1,0 +1,19 @@
+<div th:insert="header :: topo"></div>
+<div class="mx-auto" style="width: 90%">
+
+
+
+<form action="#" th:action="@{/especialidades/salvar}" th:object="${especialidade}" method="post">
+<input type="hidden" th:field="*{id}" />
+
+<div class="form-group">
+    <label for="formGroupExampleInput">Nome</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" th:field="*{nome}" placeholder="Nome especialidade">
+  </div>
+
+<button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+
+
+</div>
+<div th:insert="footer :: rodape"></div>
